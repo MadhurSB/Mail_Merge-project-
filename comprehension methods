@@ -1,0 +1,42 @@
+comprehension
+
+# # numbers = [1, 2, 3]
+# # new_numbers = [n+1 for n in numbers]
+# # print(new_numbers)
+
+# # name = "Madhur"
+# # new_name = [letter for letter in name]
+# # print(new_name)
+
+# # range = range(1,6)
+# # new_range = [2*number for number in range]
+# # print(new_range)
+
+# # # conditional_list_comprehension # type: ignore
+# # names = ["saasas", "asas", "qwsdaad","sasas","masa","asss"]
+# # new_names = [[name.upper() for name in names if len(name) > 4 ]]
+# # print(new_names)
+
+# list_of_strings = ['9', '0', '32', '8', '2', '8', '64', '29', '42', '99']
+# numbers = [int(number) for number in list_of_strings]
+# result = [even for even in numbers if even%2 !=1]
+# print(result)
+
+# # Read numbers from file1.txt
+# with open('file1.txt', 'r') as file1:
+#     Number1 = [int(number.strip()) for number in file1.readlines()]
+
+# # Read numbers from file2.txt
+# with open('file2.txt', 'r') as file2:
+#     Number2 = [int(number.strip()) for number in file2.readlines()]
+
+# # Find common numbers while maintaining the order in Number1
+# result = [num for num in Number1 if num in Number2]
+
+# # Print the result
+# print(result)
+
+result = [state for state in answser_state if state not in guessed_state]
+
+# dictionary comprehension
+new_dict = {new_key:new_value for (key, value)in dict.items()}
