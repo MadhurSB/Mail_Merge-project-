@@ -40,3 +40,30 @@ result = [state for state in answser_state if state not in guessed_state]
 
 # dictionary comprehension
 new_dict = {new_key:new_value for (key, value)in dict.items()}
+
+
+
+
+Project
+""" Nato0 """
+import csv
+
+# Initialize an empty dictionary
+nato_dict = {}
+
+# Open the CSV file and read it
+with open("nato_phonetic_alphabet.csv", mode="r") as file:
+    csv_reader = csv.DictReader(file)
+    
+    # Populate the nato_dict with letters and corresponding codes
+    for row in csv_reader:
+        nato_dict[row["letter"].upper()] = row["code"]
+
+# Ask for user input
+name = input("Enter your name: ").upper()  # Convert input to uppercase for matching
+
+# Create a list of corresponding NATO phonetic codes for each letter in the name
+result = [nato_dict[letter] for letter in name if letter in nato_dict]
+
+# Print the result
+print(result)
